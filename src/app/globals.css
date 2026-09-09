@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Colors from DESIGN.md (Literary Precision) */
+  --color-primary: #030220;
+  --color-primary-container: #1b1b3a;
+  --color-on-primary: #ffffff;
+  --color-secondary: #585f6c;
+  --color-secondary-container: #dce2f3;
+  --color-on-secondary: #ffffff;
+  --color-tertiary: #140003;
+  --color-tertiary-container: #450015;
+  --color-accent: #ee476f;
+  --color-background: #f9f9fb;
+  --color-surface: #ffffff;
+  --color-surface-container: #edeef0;
+  --color-surface-container-low: #f3f3f5;
+  --color-surface-container-high: #e8e8ea;
+  --color-text-primary: #1a1c1d;
+  --color-text-secondary: #585f6c;
+  --color-border: #e2e2e4;
+  --color-border-variant: #c8c5ce;
+  --color-error: #ba1a1a;
+  --color-success: #16a34a;
+  --color-warning: #d97706;
+
+  /* Geometry & Radius */
+  --radius-sm: 0.125rem;
+  --radius-default: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-full: 9999px;
+
+  /* Typography Font Mappings */
+  --font-heading: var(--font-public-sans);
+  --font-body: var(--font-public-sans);
+  --font-button: var(--font-space-grotesk);
+  --font-label: var(--font-space-grotesk);
+
+  /* Spacing */
+  --spacing-gutter: 16px;
+  --spacing-margin-mobile: 16px;
+  --spacing-margin-desktop: 32px;
+}
+
+body {
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+  font-family: var(--font-body), -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+button, .font-button {
+  font-family: var(--font-button), -apple-system, BlinkMacSystemFont, sans-serif;
+}
