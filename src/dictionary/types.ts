@@ -33,6 +33,102 @@ export interface Dictionary {
     products: string;
     settings: string;
   };
+  announcement: {
+    freeShipping: string;
+    followFacebook: string;
+  };
+  header: {
+    brand: string;
+    books: string;
+    authors: string;
+    about: string;
+    blog: string;
+    contact: string;
+    followUs: string;
+    cart: string;
+    search: string;
+  };
+  hero: {
+    title: string;
+    subtitle: string;
+    cta: string;
+  };
+  categories: {
+    all: string;
+    fiction: string;
+    nonFiction: string;
+    sciFi: string;
+    fantasy: string;
+    biography: string;
+    history: string;
+    mystery: string;
+    romance: string;
+    thriller: string;
+    youngAdult: string;
+  };
+  newArrivals: {
+    title: string;
+    viewAll: string;
+    addToCart: string;
+  };
+  staffPicks: {
+    title: string;
+    staffFavorite: string;
+    readReview: string;
+    overstoryQuote: string;
+  };
+  bestsellers: {
+    title: string;
+    subtitle: string;
+    topRated: string;
+    bestsellerBadge: string;
+  };
+  reviews: {
+    title: string;
+    subtitle: string;
+    viaFacebook: string;
+    review1Text: string;
+    review1Author: string;
+    review2Text: string;
+    review2Author: string;
+    review3Text: string;
+    review3Author: string;
+  };
+  blog: {
+    title: string;
+    post1Title: string;
+    post1Excerpt: string;
+    post2Title: string;
+    post2Excerpt: string;
+    post3Title: string;
+    post3Excerpt: string;
+  };
+  community: {
+    title: string;
+    subtitle: string;
+    officialName: string;
+    postTime: string;
+    postText: string;
+    likes: string;
+    comments: string;
+    connectBtn: string;
+    chatLive: string;
+  };
+  footer: {
+    brandName: string;
+    curatingText: string;
+    quickLinks: string;
+    support: string;
+    newsletter: string;
+    newsletterText: string;
+    emailPlaceholder: string;
+    subscribeBtn: string;
+    copyright: string;
+    builtWith: string;
+    shipping: string;
+    returns: string;
+    faq: string;
+  };
   public: {
     badge: string;
     heroTitle: string;

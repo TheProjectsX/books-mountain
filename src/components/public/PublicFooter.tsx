@@ -1,49 +1,173 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { useDictionary } from '@/dictionary/LanguageContext';
+import { Input, Button, message } from 'antd';
 
 export function PublicFooter() {
   const dict = useDictionary();
+  const [email, setEmail] = useState('');
+  const [subscribed, setSubscribed] = useState(false);
+
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (email && email.includes('@')) {
+      setSubscribed(true);
+      message.success('Thank you for subscribing to our newsletter!');
+      setEmail('');
+    }
+  };
 
   return (
-    <footer className="w-full bg-surface border-t border-border mt-auto">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div className="flex flex-col items-center sm:items-start">
-          <p className="text-xs text-text-secondary">
-            © {new Date().getFullYear()} {dict.public.footerCopyright}
-          </p>
-          <p className="font-label text-[11px] text-text-secondary uppercase tracking-widest mt-1">
-            {dict.public.footerActiveTheme}
-          </p>
+    <footer className="w-full bg-[#1B1B3A] text-white pt-12 pb-8 mt-auto">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-8">
+        {/* Main 4-column Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 pb-12">
+          {/* Col 1: Brand & Bio */}
+          <div className="space-y-4">
+            <Link href="/" className="inline-block">
+              <span className="font-heading font-bold text-2xl text-white tracking-tight">
+                {dict.footer.brandName}
+              </span>
+            </Link>
+            <p className="font-body text-sm text-[#C8C5CE] leading-relaxed whitespace-pre-line">
+              {dict.footer.curatingText}
+            </p>
+            {/* Social Icons */}
+            <div className="flex items-center space-x-3 pt-2">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noreferrer"
+                className="w-9 h-9 rounded-xl border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-white transition-colors"
+                aria-label="Facebook"
+              >
+                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                </svg>
+              </a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noreferrer"
+                className="w-9 h-9 rounded-xl border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-white transition-colors"
+                aria-label="Instagram"
+              >
+                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                </svg>
+              </a>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noreferrer"
+                className="w-9 h-9 rounded-xl border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-white transition-colors"
+                aria-label="Twitter"
+              >
+                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          {/* Col 2: Quick Links */}
+          <div className="space-y-4">
+            <h4 className="font-heading text-sm font-bold text-white tracking-wider">
+              {dict.footer.quickLinks}
+            </h4>
+            <ul className="space-y-2.5 font-body text-sm">
+              <li>
+                <Link href="/books" className="text-[#C8C5CE] hover:text-white transition-colors">
+                  {dict.header.books}
+                </Link>
+              </li>
+              <li>
+                <Link href="/authors" className="text-[#C8C5CE] hover:text-white transition-colors">
+                  {dict.header.authors}
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className="text-[#C8C5CE] hover:text-white transition-colors">
+                  {dict.header.about}
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog" className="text-[#C8C5CE] hover:text-white transition-colors">
+                  {dict.header.blog}
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-[#C8C5CE] hover:text-white transition-colors">
+                  {dict.header.contact}
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Col 3: Support */}
+          <div className="space-y-4">
+            <h4 className="font-heading text-sm font-bold text-white tracking-wider">
+              {dict.footer.support}
+            </h4>
+            <ul className="space-y-2.5 font-body text-sm">
+              <li>
+                <Link href="/faq" className="text-[#C8C5CE] hover:text-white transition-colors">
+                  {dict.footer.faq}
+                </Link>
+              </li>
+              <li>
+                <Link href="/faq#shipping" className="text-[#C8C5CE] hover:text-white transition-colors">
+                  {dict.footer.shipping}
+                </Link>
+              </li>
+              <li>
+                <Link href="/faq#returns" className="text-[#C8C5CE] hover:text-white transition-colors">
+                  {dict.footer.returns}
+                </Link>
+              </li>
+              <li>
+                <Link href="/admin" className="text-[#C8C5CE] hover:text-white transition-colors">
+                  {dict.common.adminPortal}
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Col 4: Newsletter */}
+          <div className="space-y-4">
+            <h4 className="font-heading text-sm font-bold text-white tracking-wider">
+              {dict.footer.newsletter}
+            </h4>
+            <p className="font-body text-sm text-[#C8C5CE] leading-relaxed">
+              {dict.footer.newsletterText}
+            </p>
+            <form onSubmit={handleSubscribe} className="flex items-center gap-2">
+              <input
+                type="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder={dict.footer.emailPlaceholder}
+                className="bg-[#2B2B52] border border-[#3D3D6B] rounded px-3 py-2 text-sm text-white placeholder-white/50 focus:outline-none focus:border-accent flex-1"
+              />
+              <button
+                type="submit"
+                className="bg-accent hover:bg-accent/90 text-white font-button text-xs font-bold uppercase px-4 py-2 rounded transition-colors"
+              >
+                {dict.footer.subscribeBtn}
+              </button>
+            </form>
+          </div>
         </div>
 
-        <div className="flex items-center space-x-6">
-          <Link
-            href="/admin/login"
-            className="text-xs font-button uppercase tracking-wider text-text-secondary hover:text-text-primary transition-colors"
-          >
-            {dict.common.login}
-          </Link>
-          <span className="text-xs text-border">•</span>
-          <a
-            href="https://ant.design"
-            target="_blank"
-            rel="noreferrer"
-            className="text-xs text-text-secondary hover:text-text-primary transition-colors"
-          >
-            Ant Design
-          </a>
-          <span className="text-xs text-border">•</span>
-          <a
-            href="https://tailwindcss.com"
-            target="_blank"
-            rel="noreferrer"
-            className="text-xs text-text-secondary hover:text-text-primary transition-colors"
-          >
-            Tailwind CSS
-          </a>
+        {/* Bottom Dividing Bar */}
+        <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-xs text-[#8483A8] gap-4">
+          <p>{dict.footer.copyright}</p>
+          <p className="flex items-center gap-1">
+            {dict.footer.builtWith}
+          </p>
         </div>
       </div>
     </footer>
