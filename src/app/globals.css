@@ -59,3 +59,12 @@ h1, h2, h3, h4, h5, h6 {
 button, .font-button {
   font-family: var(--font-button), -apple-system, BlinkMacSystemFont, sans-serif;
 }
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+

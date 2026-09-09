@@ -1,4 +1,5 @@
 import React from 'react';
+import { AnnouncementBar } from '@/components/public/AnnouncementBar';
 import { PublicHeader } from '@/components/public/PublicHeader';
 import { PublicFooter } from '@/components/public/PublicFooter';
 
@@ -8,9 +9,10 @@ export default function PublicLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-background text-text-primary selection:bg-accent selection:text-white">
+      <AnnouncementBar />
       <PublicHeader />
-      <main className="flex-1 max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+      <main className="flex-1 w-full">
         {children}
       </main>
       <PublicFooter />

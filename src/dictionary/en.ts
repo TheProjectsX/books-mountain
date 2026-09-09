@@ -2,8 +2,8 @@ import { Dictionary } from './types';
 
 export const enDictionary: Dictionary = {
   common: {
-    appName: 'Books Mountain',
-    tagline: 'Client Boilerplate Shell',
+    appName: 'Bookshop',
+    tagline: 'Your local independent bookstore, online.',
     theme: 'Theme: Literary Precision',
     loading: 'Loading...',
     save: 'Save Changes',
@@ -17,7 +17,7 @@ export const enDictionary: Dictionary = {
     liveSite: 'View Live Site',
     inStock: 'In Stock',
     outOfStock: 'Out of Stock',
-    currencySymbol: '৳',
+    currencySymbol: '$',
   },
   nav: {
     home: 'Home',
@@ -28,11 +28,116 @@ export const enDictionary: Dictionary = {
     products: 'Products Catalog',
     settings: 'Theme & System',
   },
+  announcement: {
+    freeShipping: 'FREE SHIPPING ON ORDERS OVER $50',
+    followFacebook: 'FOLLOW US ON FACEBOOK',
+  },
+  header: {
+    brand: 'Bookshop',
+    books: 'BOOKS',
+    authors: 'AUTHORS',
+    about: 'ABOUT',
+    blog: 'BLOG',
+    contact: 'CONTACT',
+    followUs: 'Follow Us',
+    cart: 'Cart',
+    search: 'Search',
+  },
+  hero: {
+    title: 'Discover Your Next Great\nRead',
+    subtitle: 'Curated picks, honest reviews, and a community of book lovers dedicated to the written word.',
+    cta: 'Shop New Arrivals',
+  },
+  categories: {
+    all: 'All',
+    fiction: 'Fiction',
+    nonFiction: 'Non-Fiction',
+    sciFi: 'Science Fiction',
+    fantasy: 'Fantasy',
+    biography: 'Biography',
+    history: 'History',
+    mystery: 'Mystery',
+    romance: 'Romance',
+    thriller: 'Thriller',
+    youngAdult: 'Young Adult',
+  },
+  newArrivals: {
+    title: 'New Arrivals',
+    viewAll: 'VIEW ALL',
+    addToCart: 'Add to Cart',
+  },
+  staffPicks: {
+    title: 'Staff Picks',
+    staffFavorite: 'STAFF FAVORITE',
+    readReview: 'READ REVIEW',
+    overstoryQuote:
+      '"A monumental novel about trees and people. It completely changed the way I look at the natural world. Essential reading for anyone who cares about the environment, structured like a soaring canopy."',
+  },
+  bestsellers: {
+    title: '🏆 Bestsellers',
+    subtitle: 'What our community is reading right now.',
+    topRated: 'TOP RATED',
+    bestsellerBadge: '#1 BESTSELLER',
+  },
+  reviews: {
+    title: 'What Our Readers Say',
+    subtitle: 'Real reviews from our Facebook community.',
+    viaFacebook: 'VIA FACEBOOK',
+    review1Text:
+      '"I found my new favorite author thanks to the staff recommendations here. The curated selections are always spot on!"',
+    review1Author: 'Sarah Jenkins',
+    review2Text:
+      '"Fast shipping, great packaging, and I love being part of a community that actually discusses the books we read."',
+    review2Author: 'Michael Chen',
+    review3Text:
+      '"The best online bookstore experience. Their blog articles on classic literature helped me rediscover reading."',
+    review3Author: 'Elena Rodriguez',
+  },
+  blog: {
+    title: 'From Our Blog',
+    post1Title: '10 Must-Read Fantasy Novels This Fall',
+    post1Excerpt:
+      "Dive into epic worlds with our carefully curated list of the season's best new fantasy releases.",
+    post2Title: 'Author Interview: The Magic of Storytelling',
+    post2Excerpt:
+      'We sit down with bestselling author Jane Doe to discuss her writing process and finding inspiration in everyday life.',
+    post3Title: 'How to Build a Reading Habit',
+    post3Excerpt:
+      'Practical tips and strategies to help you read more consistently in a world full of distractions.',
+  },
+  community: {
+    title: 'Join Our Facebook Community',
+    subtitle: 'Get exclusive deals, behind-the-scenes, and live author talks.',
+    officialName: 'Bookshop Official',
+    postTime: '2 hours ago',
+    postText:
+      "We're going live tomorrow with our book of the month discussion! Drop your questions below 👇📚",
+    likes: '👍 124 Likes',
+    comments: '💬 42 Comments',
+    connectBtn: 'Connect on Facebook',
+    chatLive: 'Chat with us live',
+  },
+  footer: {
+    brandName: 'Bookshop',
+    curatingText:
+      'Curating stories for the curious mind.\nYour local independent bookstore,\nonline.',
+    quickLinks: 'Quick Links',
+    support: 'Support',
+    newsletter: 'Newsletter',
+    newsletterText: 'Subscribe for bookish news and updates.',
+    emailPlaceholder: 'Your email address',
+    subscribeBtn: 'Subscribe',
+    copyright: '© 2026 Bookshop. All rights reserved.',
+    builtWith: 'Built with 💜 for book lovers.',
+    shipping: 'Shipping',
+    returns: 'Returns',
+    faq: 'FAQ',
+  },
   public: {
     badge: 'Starter Boilerplate Shell',
-    heroTitle: 'Books Mountain',
+    heroTitle: 'Bookshop',
     heroSubtitle:
-      'A production-ready client starter powered by Next.js App Router, Ant Design, Tailwind CSS, and Prisma with MongoDB. All colors, typography, and geometry adapt automatically from design tokens.',
+      'A curated collection of exceptional literature, modern classics, and thoughtful editorial recommendations.',
     openAdmin: 'Open Admin Dashboard',
     viewSample: 'View Sample Items',
     sampleWorks: 'Sample Editorial Works',
@@ -43,7 +148,7 @@ export const enDictionary: Dictionary = {
       'This neutral starter applies design tokens to both Tailwind utility classes and Ant Design components via CSS variables and typed TypeScript mappings.',
     typographySystem: 'Typography System',
     geometryShapes: 'Geometry & Shapes',
-    footerCopyright: 'Books Mountain. Production-Ready Client Starter.',
+    footerCopyright: 'Bookshop. Production-Ready Client Starter.',
     footerActiveTheme: 'Active Theme: Literary Precision (DESIGN.md)',
   },
   admin: {
